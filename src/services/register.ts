@@ -13,7 +13,7 @@ interface RegisterUserResponse {
   user: User
 }
 
-export class RegisterUserCase {
+export class RegisterUseCase {
   // eslint-disable-next-line prettier/prettier
   constructor(private userRespository: UserRepository) { }
 
