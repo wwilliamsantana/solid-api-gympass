@@ -18,4 +18,17 @@ export class InMemoryCheckIn implements CheckInRepository {
 
     return checkin
   }
+
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  async findByUserIdOnDate(userId: string, date: Date) {
+    const checkInOnSameDate = await this.items.find(
+      (item) => item.user_id === userId,
+    )
+
+    if (!checkInOnSameDate) {
+      return null
+    }
+
+    return checkInOnSameDate
+  }
 }
